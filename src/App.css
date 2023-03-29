@@ -1,5 +1,10 @@
 .App {
-    padding: 20px;
+    padding: 20px 50px;
+}
+
+.controls {
+    display: flex;
+    gap: 50px;
 }
 
 input {
@@ -19,8 +24,12 @@ label input {
     margin-top: 5px;
 }
 
-.fields {
+.fields-wrapper {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.content-editor-wrapper {
+    flex-grow: 1;
 }

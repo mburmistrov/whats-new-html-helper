@@ -45,9 +45,7 @@ const getOutputForPost = (post) => {
         </a>
         <div className="f-description">
           <div className="f-text f-text_theme_dark">
-            <p>
-              Content will be here
-            </p>
+            ${post.contentHtml}
           </div>
         </div>
       </div>
