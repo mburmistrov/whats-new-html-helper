@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="controls">
+      <section className="controls">
         <div className="fields-wrapper">
           <label className="field">
             Title
@@ -42,8 +42,11 @@ function App() {
           <label>Content</label>
           <ContentEditor initialContent={post.contentHtml} onUpdate={newContentHtml => setPost({...post, contentHtml: newContentHtml })} />
         </div>
-      </div>
-      <Output post={post} />
+      </section>
+      <section>
+        <p className="section-title">Output</p>
+        <Output post={post} />
+      </section>
     </div>
   );
 }

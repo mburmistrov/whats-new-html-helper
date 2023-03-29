@@ -33,3 +33,8 @@ label input {
 .content-editor-wrapper {
     flex-grow: 1;
 }
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}

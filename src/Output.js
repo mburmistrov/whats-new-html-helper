@@ -56,7 +56,7 @@ const getOutputForPost = (post) => {
 function Output({ post }) {
   const outputString = getOutputForPost(post);
   return (
-  <SyntaxHighlighter customStyle={{'font-size': '12px'}}>
+  <SyntaxHighlighter customStyle={{'font-size': '11px'}}>
     {outputString}
   </SyntaxHighlighter>
   );
