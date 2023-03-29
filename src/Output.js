@@ -1,12 +1,14 @@
 import SyntaxHighlighter from 'react-syntax-highlighter';
 
+const convertToKebabCase = (value) => value.toLowerCase().split(" ").join("-");
 const getOutputForPost = (post) => {
-  const attrFormatTitle = post.title.toLowerCase().split(" ").join("-");
-  const attrFormatPlatform = post.platform.toLowerCase();
-  const attrFormatQuarter = post.quarter.toLowerCase().split(" ").join("-");
+  const attrFormatTitle = convertToKebabCase(post.title);
+  const attrFormatPlatform = convertToKebabCase(post.platform);
+  const attrFormatQuarter = convertToKebabCase(post.quarter);
+  const attrFormatTag = convertToKebabCase(post.tag);
 
   return `
-<section className="wt-section wt-section_bg_dark wt-section_theme_dark package-management ${attrFormatPlatform}">
+<section className="wt-section wt-section_bg_dark wt-section_theme_dark ${attrFormatTag} ${attrFormatPlatform}">
   <div className="wt-container">
     <div className="f-section">
       <div className="f-title"
@@ -18,7 +20,7 @@ const getOutputForPost = (post) => {
           <div className="wt-col-inline">${post.date}</div>
           <div className="wt-col-inline copy-link"
              data-href="#scope-${attrFormatQuarter}-${attrFormatTitle}"></div>
-          <div className="wt-col-inline"><span className="wn-tag">Package management</span></div>
+          <div className="wt-col-inline"><span className="wn-tag">${post.tag}</span></div>
         </div>
         <div className="wt-row wt-row_size_m wt-row_justify_between">
           <h2 className="wt-h2 wt-h2_theme_dark wt-offset-top-8 wt-col-8 wt-col-sm-12">

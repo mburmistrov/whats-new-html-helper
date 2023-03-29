@@ -9,6 +9,7 @@ function App() {
     date: "March 10, 2023",
     platform: "Cloud",
     quarter: "2023 q1",
+    tag: "Package management",
     imageName: "61-use-roles.png",
     contentHtml: "<p>Please put the content here. You can paste from Google Doc.</p>"
   });
@@ -32,6 +33,10 @@ function App() {
           <label className="field">
             Quarter
             <input type="text" value={post.quarter} onInput={e => setPost({...post, quarter: e.target.value})}/>
+          </label>
+          <label className="field">
+            Tag
+            <input type="text" value={post.tag} onInput={e => setPost({...post, tag: e.target.value }) } />
           </label>
           <label className="field">
             Image name
